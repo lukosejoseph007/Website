@@ -1,0 +1,798 @@
+/*-----------------------------------------------------------------------*\
+    #style.css
+\*-----------------------------------------------------------------------*/
+
+/**
+ * copyright 2023 Lukose Joseph
+ */
+
+/*-----------------------------------------------------------------------*\
+    #CUSTOM PROPERTY
+\*-----------------------------------------------------------------------*/
+:root {
+  /* Colors */
+  --indigo-dye: rgb(0, 74, 124);
+  --carolina-blue: rgb(128, 178, 214);
+  --dim-gray: rgb(102, 102, 102);
+  --white: rgb(255, 255, 255);
+  --mikado-yellow: rgb(255, 195, 0);
+  --black: #000000;
+
+  /* Typography */
+  --ff-open-sans: monospace, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --fs-1: 2.8rem;
+  --fs-2: 1.8rem;
+  --fs-3: 1.5rem;
+  --fs-4: 1.2rem;
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+/*-----------------------------------------------------------------------*\
+    #RESET
+\*-----------------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  a,
+  img,
+  span,
+  button {
+    display: block;
+  }
+}
+
+a {
+  color: var(--mikado-yellow);
+  text-decoration: none;
+}
+
+html {
+  font-family: var(--ff-open-sans);
+  font-size: 0.625rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+/*-----------------------------------------------------------------------*\
+    #HEADER STYLE
+\*-----------------------------------------------------------------------*/
+.navbar {
+  background-color: var(--indigo-dye) !important;
+  border-bottom: 3px solid #ffc300;
+  border-radius: 0 0 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.nav-item {
+  margin: 0vw 0.4vw 0vw;
+}
+
+.navbar .nav-item .nav-link {
+  color: white;
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link {
+  font-weight: bold !important;
+  color: #ffc300 !important;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover {
+  color: #ffc300 !important;
+  background-color: rgba(255, 195, 0, 0.2) !important;
+}
+/*-----------------------------------------------------------------------*\
+    #NProgress.js 
+\*-----------------------------------------------------------------------*/
+#nprogress .bar {
+  background: #ffc300 !important;
+  height: 0.3rem !important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #ffc300, 0 0 5px var(--carolina-blue) !important;
+  animation-duration: 5s !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: #ffc300 !important;
+  border-left-color: #ffc300 !important;
+  border-width: 2px !important;
+  border-radius: 40px !important;
+  margin-top: 1.5rem !important;
+  margin-right: 4rem !important;
+}
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #80b2d6;
+  z-index: 9999;
+}
+/*-----------------------------------------------------------------------*\
+    #MEDIA QUERY - 576px
+\*-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------*\
+    #MEDIA QUERY - 768px
+\*-----------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .logo-container .logo {
+    margin-left: 5vw;
+  }
+
+  .nav-link {
+    margin-left: 5vw;
+  }
+}
+@media (min-width: 768px) {
+  .logo-container-content .logo {
+    margin-bottom: -2rem;
+  }
+}
+/*-----------------------------------------------------------------------*\
+    #MEDIA QUERY - 992px Maximum
+\*-----------------------------------------------------------------------*/
+@media (max-width: 992px) {
+  .logo-container .logo-text {
+    visibility: hidden !important;
+  }
+
+  .navbar-brand {
+    width: 50%;
+  }
+
+  .navbar-nav {
+    padding-top: 10vw;
+    padding-bottom: 10vw;
+  }
+
+  .navbar-toggler {
+    margin-right: 2vw;
+  }
+
+  /*
+* Main Content - 992 Max
+*/
+
+  .logo-container-content {
+    display: flex;
+    justify-content: center;
+    height: 20vw;
+  }
+
+  .container {
+    padding-right: 5vw;
+    padding-left: 0vw;
+    margin-right: 0;
+    margin-left: 0;
+    width: 100vw;
+    max-width: 992px;
+  }
+
+  .logo-container .logo {
+    margin-right: 1.5vw;
+    margin-left: 6vw;
+  }
+}
+/* Parallax - About Section - 992 and less*/
+/*-----------------------------------------------------------------------*\
+  #MEDIA
+  QUERY
+  -
+  992px
+  Minimum
+  \*-----------------------------------------------------------------------*/
+@media (min-width: 992px) {
+  .logo-text {
+    font-size: 1.6rem;
+    font-weight: 100;
+    align-items: center;
+    margin: 0;
+  }
+
+  .navbar {
+    height: 10vh;
+  }
+
+  .navbar-brand {
+    width: 50%;
+    margin-right: 2vw;
+  }
+
+  .logo-container .logo {
+    margin-right: 1.5vw;
+    margin-left: 6vw;
+  }
+
+  /*
+* Main Content - 992 Min
+*/
+  .logo-container-content {
+    display: flex;
+    justify-content: center;
+    height: 15vw;
+  }
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+/*-----------------------------------------------------------------------*\
+    #MEDIA QUERY - 1200px
+\*-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------*\
+    #MEDIA QUERY - 1200px and up
+\*-----------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------*\
+    #MAIN CONTENT | HERO Section
+\*-----------------------------------------------------------------------*/
+.main-content {
+  width: 100vw;
+}
+.hero-section {
+  /*background-image: url("/assets/vintage-grunge-blue-concrete-texture-wall-background-with-vignette.jpg");*/
+  background-size: cover;
+  background-color: #002d4e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: radial-gradient(circle, #002a47, #002d4e, #0f4c81);
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /*background-color: #002d4e;*/
+  /*opacity: 0.5;*/
+  /* Adjust the color and opacity as needed */
+  z-index: 0;
+}
+
+.hero-title {
+  font-size: 5rem;
+  display: inline-block;
+  justify-content: center;
+  font-weight: 700px;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  position: relative;
+  background-image: linear-gradient(to right, #ff6b6b, #007bff, #ff6b6b);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: right center;
+  animation: gradient-animation 10s linear infinite;
+  transition: background-position 0.3s ease;
+  color: transparent;
+  padding: 0.5rem 1rem;
+  opacity: 0; /* Start with a transparent state */
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.75s; /* Delay the animation by 1.5 seconds */
+  -webkit-animation-fill-mode: forwards;
+  animation: fade-in 1s ease forwards; /* Apply the fade-in animation */
+  animation-delay: 0.75s;
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: right center;
+  }
+  100% {
+    background-position: left center;
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle-text {
+  padding: 0.5rem 1rem 0.675rem;
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 100;
+  color: #ffffff;
+  opacity: 0; /* Start with a transparent state */
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2.5s; /* Delay the animation by 1.5 seconds */
+  -webkit-animation-fill-mode: forwards;
+  animation: fade-in 1s ease forwards; /* Apply the fade-in animation */
+  animation-delay: 2.5s;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.logo-container-content .logo {
+  z-index: 1;
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s; /* Delay the animation by 1.5 seconds */
+  -webkit-animation-fill-mode: forwards;
+  animation: fade-in 2s ease forwards; /* Apply the fade-in animation */
+  animation-delay: 0s;
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*Add custom cursor so it auto inherits font styles*/
+.typed::after {
+  content: "|";
+  display: inline;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+/*Removes cursor that comes with typed.js*/
+.typed-cursor {
+  position: relative;
+  opacity: 0;
+  display: none;
+}
+
+/*Custom cursor animation*/
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.typed_wrap {
+  display: flex;
+  border: 0.125rem solid rgba(255, 255, 255, 0.2);
+  width: 50rem;
+  height: auto;
+  padding: 0.625rem;
+  box-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 74, 124, 0.5);
+  /*centers it in the .banner*/
+  position: relative;
+  justify-content: center;
+}
+
+.typed_wrap h1 {
+  display: inline;
+}
+.typed_wrap .hero-subtitle {
+  margin: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.7rem;
+}
+.hero-content .banner {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  margin: 0.675rem;
+  position: relative;
+  opacity: 0; /* Initially hide the element */
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 5s; /* Delay the animation by 1.5 seconds */
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-delay: 5s; /* Delay the animation by 1.5 seconds */
+  animation-fill-mode: forwards; /* Maintain the final state of the animation */
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+
+.hero-cta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  opacity: 0; /* Initially hide the element */
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 6s; /* Delay the animation by 1.5 seconds */
+  -webkit-animation-fill-mode: forwards;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-delay: 8s; /* Delay the animation by 1.5 seconds */
+  animation-fill-mode: forwards; /* Maintain the final state of the animation */
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0; /* Start with 0 opacity */
+  }
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+
+.cta-button.primary {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: transparent;
+  color: #ffc300;
+  border: 0.125rem solid #ffc300;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  margin-right: 0.25rem;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.cta-button.primary:hover {
+  background-color: #ffc300;
+  color: #004a7c;
+  text-decoration: none;
+}
+
+.cta-button.secondary {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #ffc300;
+  color: #004a7c;
+  border: 0.125rem solid #ffc300;
+  margin-left: 0.25rem;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.cta-button.secondary:hover {
+  background-color: #004a7c;
+  color: #ffc300;
+  border: 0.125rem solid #ffc300;
+  text-decoration: none;
+}
+
+.scroll-to-bottom {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 999;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-bottom:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.scroll-to-bottom.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+/*-----------------------------------------------------------------------*\
+    #MAIN CONTENT | PARALLAX - ABOUT Section
+\*-----------------------------------------------------------------------*/
+.parallax-section {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  background-color: var(--indigo-dye);
+  color: var(--white);
+}
+.about-images {
+  position: relative;
+  width: 53rem;
+  height: 53rem;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-content {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+
+.about-content h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.about-content h2::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #ffc300;
+  transform-origin: left center;
+  transition: width 1.2s ease-in-out;
+}
+
+.about-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffc300;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 1.2s ease-in-out;
+}
+
+.about-content h2.underline-visible::before {
+  width: 100%;
+}
+
+.about-content h2.underline-visible::after {
+  transform: scaleX(1);
+}
+
+.learn-more-link {
+  display: inline-block;
+  font-weight: bold;
+  padding-top: 10px;
+  text-decoration: none;
+  color: #ffc300;
+  transition: color 0.3s;
+}
+
+.about-content h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.learn-more-link:hover {
+  color: var(--carolina-blue) !important;
+}
+.learn-more-link a:hover {
+  color: var(--carolina-blue) !important;
+}
+
+/*SCROLL TO TOP BUTTON*/
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-to-top-button i {
+  transform: translateY(2px);
+}
+
+.scroll-to-top-button.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #333;
+}
+/*
+  *-----------------------------------------------------------------------*\
+  #FOOTER
+  STYLE
+  \*-----------------------------------------------------------------------*/
+.footer {
+  background-color: #004a7c;
+  color: var(--white);
+  text-align: center;
+  padding: 0.7vh;
+}
+.footer .container {
+  display: flex;
+  position: relative;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.footer-content .footer-txt {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+/*
+  *-----------------------------------------------------------------------*\
+  #Custom Scrollbar
+  \*-----------------------------------------------------------------------*/
+/* Track */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f5f5f5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+body {
+  overflow-x: hidden;
+}
